@@ -11,6 +11,7 @@ export default function Home(){
     return(
         <>
         <Navbar/>
+        <main>
         <section className="sec1">  
             <div>
                 <h1>Trouvez votre logement idéal</h1>
@@ -31,6 +32,7 @@ export default function Home(){
                 />
             ))}
         </section>
+        </main>
         <Footer/>
         </>
     )

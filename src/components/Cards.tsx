@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 import "../styles/Cards.scss";
 
 export type RoomCard = {
@@ -9,33 +10,33 @@ export type RoomCard = {
     rating: string;
 };
 
-export default function Card({ title, location, pictures, tags, rating }: RoomCard) {
-    const ratingCards = parseInt(rating, 10);
-    const stars = []; 
-   
-    for(  let i = 5;i<=5; i++){
-        if(i <= ratingCards){
-            stars.push(<i   key= {i} className="fa-solid fa-star"></i>)   
-        }else{
-        stars.push(<i  key= {i} className="fa-solid fa-star"></i>)
-        }
+export default function Card({ id, title, location, pictures, tags, rating }: RoomCard) {
+    const ratingNumber = parseInt(rating, 10);
+    const stars = [];
 
+    for (let i = 1; i <= 5; i++) {
+        if (i <= ratingNumber) {
+            stars.push(<i key={i} className="fa-solid fa-star"></i>);
+        } else {
+            stars.push(<i key={i} className="fa-regular fa-star"></i>);
+        }
     }
+
     return (
         <div className="card">
-            <a href="#">
+           <Link to={`/logement/${id}`}>
             <img src={pictures[1]} alt={title} />
             <div className="card-content">
                 <h3>{title}</h3>
-                <p className="location">{location}</p>
+                <p className="location"> <i className="fa-solid fa-location-dot"></i> {location}</p>
                 <div className="tags">
-                    {tags.map((tag) => (
-                        <span key={tag} className="tag">{tag}</span>
-                    ))}
+                {tags.map((tag) => (
+                <span key={tag} className="tag">{tag}</span>))}
                 </div>
-                <p className="rating">{stars}</p>
+                <p className="rating">{stars} <span> ({rating})</span> </p>
             </div>
-            </a>
+          
+           </Link>
         </div>
     );
 }
