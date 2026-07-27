@@ -43,9 +43,9 @@ export default function Detail(){
                 </div>
             </article>
            
-        </div>
        <CollapseCard title="Description" description={description} />
         <CollapseEq title="Equipements" equipments={equipments} />
+        </div>
 
         
         <Footer/>

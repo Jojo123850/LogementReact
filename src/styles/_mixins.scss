@@ -1,10 +1,14 @@
+@import './_variables.scss';
+
 @mixin flex-center {
   display: flex;
   align-items: center;
   justify-content: center;
 }
 
-
+@mixin li{
+    color: $tertiary-color ;
+}
 
 @mixin responsive($breakpoint) {
   @media (max-width: $breakpoint) {
