@@ -1,0 +1,27 @@
+@import './_variables.scss';
+@import './_mixins.scss';
+@import './global.scss';
+
+
+.sec1{
+    background: linear-gradient(180deg, #dbe4f0 0%, #f5f7fa 100%);
+    padding: 80px 14px;
+    
+    div{
+        max-width: 1216px;
+        margin: auto;
+        align-self: center;
+        text-align: center;
+
+        h1{
+            margin-bottom: 16px;
+
+        }
+        p{
+            max-width: 500px;
+            margin: 0 auto;
+            color: $tertiary-color;
+        }
+    }
+
+}
