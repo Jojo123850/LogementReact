@@ -5,6 +5,8 @@ import "../styles/Navbar.scss";
 import "../styles/Footer.scss";
 import { useParams } from "react-router-dom";
 import "../styles/Detail.scss";
+import CollapseCard from "../components/Collapse";
+import CollapseEq from "../components/CollapseEquipement";
 
 
 export default function Detail(){
@@ -21,12 +23,12 @@ export default function Detail(){
         )
     } else{
 
-    const { title, location, pictures, tags, host} = logement;
+    const { title, location, pictures, tags, host, description, equipments} = logement;
     return (
         <>
         <Navbar/>
         <div className="cardDetail">
-            <img className="pic" src={pictures[1]} alt={title} />
+            <img className="pic" src={pictures[0]} alt={title} />
             <div className="card-contentDetail">
                 <h3>{title}</h3>
                 <p className="location"> <i className="fa-solid fa-location-dot"></i> {location}</p>
@@ -40,9 +42,12 @@ export default function Detail(){
                     <p>Hote depuis 3ans</p>
                 </div>
             </article>
-            <p>Description</p>
-            <p>Equipements</p>
+           
         </div>
+       <CollapseCard title="Description" description={description} />
+        <CollapseEq title="Equipements" equipments={equipments} />
+
+        
         <Footer/>
         </>
     );
