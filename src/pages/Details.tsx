@@ -45,22 +45,32 @@ export default function Detail(){
 
             <div className="card-contentDetail">
                 <h1>{title}</h1>
-                <p className="location"> <i className="fa-solid fa-location-dot"></i> {location}</p>
 
-                <div className="tags">{tags.map((tag) => (<span key={tag} className="tag">{tag}</span>))}
+                <p className="location"> 
+                    <i className="fa-solid fa-location-dot"></i> {location}
+                </p>
+
+                <div className="tags">
+                    {tags.map((tag) => (<span key={tag} className="tag">{tag}</span>))}
                 </div>
-                <div className="rating">{stars}</div>
+
+                <div className="rating">
+                    {stars}
+                </div>
             </div>
+
             <article>
                 <img src={host.picture} alt={host.name} />
+
                 <div className="divInfo">
                     <h3>{host.name}</h3>
                     <p>Hote depuis 3ans</p>
                 </div>
             </article>
            
-       <CollapseCard title="Description" description={description} />
-        <CollapseEq title="Equipements" equipments={equipments} />
+            <CollapseCard title="Description" description={description} />
+            <CollapseEq title="Equipements" equipments={equipments} />
+            
         </div>
 
         <Footer/>

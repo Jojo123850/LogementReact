@@ -28,11 +28,16 @@ export default function Card({ id, title, location, pictures, tags, rating }: Ro
             <img src={pictures[1]} alt={title} />
             <div className="card-content">
                 <h3>{title}</h3>
-                <p className="location"> <i className="fa-solid fa-location-dot"></i> {location}</p>
+                <p className="location">
+                     <i className="fa-solid fa-location-dot"></i> 
+                     {location}
+                </p>
+
                 <div className="tags">
-                {tags.map((tag) => (
-                <span key={tag} className="tag">{tag}</span>))}
+                    {tags.map((tag) => (
+                    <span key={tag} className="tag">{tag}</span>))}
                 </div>
+                
                 <p className="rating">{stars} <span> ({rating})</span> </p>
             </div>
           

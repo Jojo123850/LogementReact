@@ -7,7 +7,7 @@ type CollapseEquipementProps = {
 };
 
 
-function Icone(equipement: string) {
+function IconeEquip(equipement: string) {
   switch (equipement) {
     case "Wifi":
       return <i className="fa-solid fa-wifi"></i>;
@@ -91,7 +91,9 @@ export default function CollapseEq({ title, equipments }: CollapseEquipementProp
             {isOpen && (
                 <ul className="list-equip">
                     {equipments.map((equip) => (
-                        <li key={equip}>{Icone(equip)}  <span> {equip} </span> </li>
+                        <li key={equip}>{IconeEquip(equip)}  
+                            <span> {equip} </span> 
+                        </li>
                     ))}
                 </ul>
             )}

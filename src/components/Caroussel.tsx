@@ -24,7 +24,7 @@ export default function GetPictures({ pictures, alt }: Caroussel){
             if(nextImage === pictures.length -1) {
                 return 0;
             } else{
-                return nextImage + 1
+                return nextImage + 1;
             }
         })
     }
@@ -38,9 +38,15 @@ export default function GetPictures({ pictures, alt }: Caroussel){
     return(
         <>
         <div className="divImage">
-            <button className="btn1" onClick={prevPic}><i className="fa-solid fa-arrow-left"></i></button>
+            <button className="btn1" onClick={prevPic}>
+                <i className="fa-solid fa-arrow-left"></i>
+            </button>
+
             <img className="image" src= {pictures[pictureIndex]} alt={alt} />
-            <button className="btn2" onClick={nextPic}><i className="fa-solid fa-arrow-right"></i></button>
+
+            <button className="btn2" onClick={nextPic}>
+                <i className="fa-solid fa-arrow-right"></i>
+            </button>
         </div>
         </>
     )

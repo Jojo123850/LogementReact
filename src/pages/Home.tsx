@@ -11,6 +11,7 @@ export default function Home(){
     return(
         <>
         <Navbar/>
+
         <main>
         <section className="sec1">  
             <div>
@@ -33,6 +34,7 @@ export default function Home(){
             ))}
         </section>
         </main>
+        
         <Footer/>
         </>
     )

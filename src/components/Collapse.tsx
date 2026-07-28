@@ -21,8 +21,11 @@ export default function Collapse({ description, title }: CollapseCard) {
         </div>
 
 
-        {isOpen && (<div className="desc" >{description}</div>
-      )}
+        {isOpen && (
+            <div className="desc" >
+                {description}
+            </div>
+         )}
     </div>
   );
 }

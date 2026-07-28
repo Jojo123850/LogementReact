@@ -35,8 +35,6 @@ export default function Footer(){
                         <li><a href="#">Cookies</a></li>
                  </ul>  
             </article>
-
-           
         </div>
 
         <div className="copyright">
