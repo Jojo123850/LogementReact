@@ -24,7 +24,17 @@ export default function Detail(){
         )
     } else{
 
-    const { title, location, pictures, tags, host, description, equipments} = logement;
+    const { title, location, pictures, tags, rating, host, description, equipments} = logement;
+    const stars = [];
+    const ratingNumber =Number(rating);
+
+    for (let i = 1; i <= 5; i++) {
+        if (i <= ratingNumber) {
+            stars.push(<i key={i} className="fa-solid fa-star"></i>);
+        } else {
+            stars.push(<i key={i} className="fa-regular fa-star"></i>);
+        }
+    }
     return (
         <>
         <Navbar/>
@@ -39,6 +49,7 @@ export default function Detail(){
 
                 <div className="tags">{tags.map((tag) => (<span key={tag} className="tag">{tag}</span>))}
                 </div>
+                <div className="rating">{stars}</div>
             </div>
             <article>
                 <img src={host.picture} alt={host.name} />

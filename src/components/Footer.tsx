@@ -40,7 +40,7 @@ export default function Footer(){
         </div>
 
         <div className="copyright">
-            <p className="copyright">© 2024 Kasa. Tous droits réservés.<a href="https://storycom.fr"></a></p>
+            <p>© 2024 Kasa. Tous droits réservés.<a href="https://storycom.fr"></a></p>
         </div>
 
     </footer>

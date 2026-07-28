@@ -5,7 +5,13 @@
   align-items: center;
   justify-content: center;
 }
+@media (max-width: 1024px) {
+    .cardDetail {
+    padding: 20px;
+  }
 
+    
+}
 
 @mixin responsive($breakpoint) {
   @media (max-width: $breakpoint) {

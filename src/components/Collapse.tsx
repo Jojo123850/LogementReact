@@ -18,7 +18,6 @@ export default function Collapse({ description, title }: CollapseCard) {
         <div className="collapsediv">
             <p aria-expanded={isOpen}>{title}</p>
             {isOpen ? <i className="fa-solid fa-arrow-up"></i> : <i className="fa-solid fa-arrow-down"></i>} 
-
         </div>
 
 
