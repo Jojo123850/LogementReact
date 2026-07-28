@@ -6,9 +6,6 @@
   justify-content: center;
 }
 
-@mixin li{
-    color: $tertiary-color ;
-}
 
 @mixin responsive($breakpoint) {
   @media (max-width: $breakpoint) {

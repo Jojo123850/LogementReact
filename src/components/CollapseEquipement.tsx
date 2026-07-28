@@ -1,4 +1,5 @@
 import { useState } from "react";
+import "../styles/Detail.scss";
 
 type CollapseEquipementProps = {
     title: string;

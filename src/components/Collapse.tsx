@@ -1,4 +1,5 @@
 import { useState} from "react";
+import "../styles/Detail.scss";
 
 type CollapseCard = {
     description: string;
@@ -19,7 +20,7 @@ export default function Collapse({ description, title }: CollapseCard) {
     </button>
 
       {isOpen && (
-        <div >
+        <div className="desc" >
           {description}
         </div>
       )}

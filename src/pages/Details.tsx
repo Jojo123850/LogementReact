@@ -7,6 +7,7 @@ import { useParams } from "react-router-dom";
 import "../styles/Detail.scss";
 import CollapseCard from "../components/Collapse";
 import CollapseEq from "../components/CollapseEquipement";
+import GetPictures from "../components/Caroussel";
 
 
 export default function Detail(){
@@ -28,7 +29,8 @@ export default function Detail(){
         <>
         <Navbar/>
         <div className="cardDetail">
-            <img className="pic" src={pictures[0]} alt={title} />
+                  
+            <GetPictures pictures={pictures} alt={title} />
             <div className="card-contentDetail">
                 <h3>{title}</h3>
                 <p className="location"> <i className="fa-solid fa-location-dot"></i> {location}</p>
