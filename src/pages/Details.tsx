@@ -42,7 +42,7 @@ export default function Detail(){
             </div>
             <article>
                 <img src={host.picture} alt={host.name} />
-                <div>
+                <div className="divInfo">
                     <h3>{host.name}</h3>
                     <p>Hote depuis 3ans</p>
                 </div>

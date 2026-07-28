@@ -7,16 +7,20 @@
     margin: auto;
     place-self: center;
     padding-bottom: 40px;
-    .pic {
-    width: 886px;
+   .pic {
+    width: 100%;        // s'adapte à l'écran quand il est petit
+    max-width: 886px;   // mais ne dépasse jamais 886px sur grand écran
     height: 384px;
     object-fit: cover;
-    }
+}
    .divImage {
-    position: relative;
-    display: flex;
-    justify-content: center;
-
+        position: relative;
+        display: flex;
+        justify-content: center;
+        width: 100vw;
+        max-width: 950px;
+        left: 50%;
+        transform: translateX(-50%);
     .image {
         position: relative;
         z-index: 1;
@@ -51,6 +55,7 @@
     .btn2 {
         right: 16px;
     }
+ 
 }
     .card-contentDetail {
         padding: 16px;
@@ -93,10 +98,16 @@
        gap: 10px;
        
        img{
-        max-width: 100%;
+        margin-left: 10px; 
+        width: 64px;
         height: 64px;
         object-fit: cover;
-        border-radius: 35px;
+        border-radius: 50%;
+        flex-shrink: 0;
+        
+       }
+       .divInfo{
+        align-self: center;
        }
     }
 
@@ -133,4 +144,25 @@
             }
         }
     }
+}
+
+@media (max-width: 767px){
+    .cardDetail {
+        .divImage{
+            .image{
+                border: none;
+            }
+        }
+        .collapse{
+        padding: 20px;
+       i{
+        display: none;
+       }
+
+    }
+        
+
+    }
+        
+    
 }
