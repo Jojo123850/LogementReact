@@ -1,4 +1,5 @@
-// import { Link } from "react-router-dom";
+import { Link } from "react-router-dom";
+
 export default function Footer(){
     return(
 <footer>
@@ -18,7 +19,9 @@ export default function Footer(){
                     <li><a  href="#">Centre d'aide</a></li>
                     <li><a href="#">Nous contacter</a></li>
                     <li><a href="#">Signaler un problème</a></li>
-                    <li><a href="#">Page 404</a></li>
+                    <li>
+                        <Link to="/NotFound">Page 404</Link>
+                    </li>
                 </ul>
             
             </article>
