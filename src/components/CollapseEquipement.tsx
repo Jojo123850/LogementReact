@@ -14,10 +14,11 @@ export default function CollapseEq({ title, equipments }: CollapseEquipementProp
     };
 
     return (
-        <div className="collapse">
-            <button type="button" onClick={toggleOpen} aria-expanded={isOpen}>
-                {title}{isOpen ? <i className="fa-solid fa-arrow-up"></i> : <i className="fa-solid fa-arrow-down"></i>} 
-            </button>
+        <div className="collapse"  onClick={toggleOpen}>
+            <div className="collapsediv">
+                <p aria-expanded={isOpen}>{title}</p>
+                {isOpen ? <i className="fa-solid fa-arrow-up"></i> : <i className="fa-solid fa-arrow-down"></i>}  
+            </div>
 
             {isOpen && (
                 <ul>

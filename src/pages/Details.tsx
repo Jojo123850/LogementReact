@@ -28,12 +28,15 @@ export default function Detail(){
     return (
         <>
         <Navbar/>
+
         <div className="cardDetail">
                   
             <GetPictures pictures={pictures} alt={title} />
+
             <div className="card-contentDetail">
-                <h3>{title}</h3>
+                <h1>{title}</h1>
                 <p className="location"> <i className="fa-solid fa-location-dot"></i> {location}</p>
+
                 <div className="tags">{tags.map((tag) => (<span key={tag} className="tag">{tag}</span>))}
                 </div>
             </div>
@@ -49,7 +52,6 @@ export default function Detail(){
         <CollapseEq title="Equipements" equipments={equipments} />
         </div>
 
-        
         <Footer/>
         </>
     );
