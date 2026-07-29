@@ -43,6 +43,7 @@ LogementReact/
 │   │   ├── Collapse.tsx        # Section repliable générique (description + équipements)
 │   │   ├── Footer.tsx
 │   │   └── Navbar.tsx
+|   |   └── BurgerMenu.tsx
 │   ├── utils/
 │   │   └── Icone.tsx           # icône Font Awesome
 │   ├── data/
