@@ -2,8 +2,6 @@
 @import './_mixins.scss';
 @import './global.scss';
 
-
-// styles pour le header
 header {
     max-width: 1216px;
     margin: auto;
@@ -11,8 +9,10 @@ header {
     display: flex;
     align-items: center;
     justify-content: space-between;
+    position: relative;
+  
 
-    div {
+    .headerDiv {   
         display: flex;
         align-items: center;
         justify-content: space-between;
@@ -26,16 +26,40 @@ header {
         li a {
             color: $tertiary-color; 
             font-size: 14px;
-        }
+            
+            &:hover{
+                color:$quaternary-color ;
+            }
+        } 
     }
 
     #burgerMenu {
         display: none; 
+        color: $quaternary-color;
+        font-size: 20px;
+        border: none;
+        background: none;
+   
     }
 
     @include responsive($breakpoint) {
         nav ul {
-            display: none;
+            &.menu-closed {
+                display: none;
+            }
+            &.menu-open {
+                display: flex;
+                flex-direction: column;
+                position: absolute;
+                z-index: 20;
+                top:100%;
+                right: 3px;
+                width: 200px;
+                background-color: $primary-color;
+                padding: 16px;
+                gap: 16px;
+
+            }
         }
         #burgerMenu {
             display: block;
