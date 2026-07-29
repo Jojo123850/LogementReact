@@ -2,6 +2,8 @@
 @import './_mixins.scss';
 @import './global.scss';
 
+
+// styles pour le header
 header {
     max-width: 1216px;
     margin: auto;
@@ -30,16 +32,13 @@ header {
     #burgerMenu {
         display: none; 
     }
-}
 
-@media (max-width: 767px) {
-    header{
-        nav ul{
+    @include responsive($breakpoint) {
+        nav ul {
             display: none;
         }
-        #burgerMenu{
+        #burgerMenu {
             display: block;
         }
-
     }
 }

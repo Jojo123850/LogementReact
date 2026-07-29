@@ -1,5 +1,6 @@
 @import './_variables.scss';
 
+// mixins réutilisables
 @mixin flex-center {
   display: flex;
   align-items: center;

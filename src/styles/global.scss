@@ -1,6 +1,8 @@
 @import './_variables.scss';
 @import './_mixins.scss';
 
+
+// styles qui peuvent etre utilisé dans tout le projet
 * {
   margin: 0;
   padding: 0;
@@ -12,7 +14,7 @@ li{
    
 }
 
-h1,a, h3, li,p, .content{
+h1,a, h3, li,p,.content{
     font-family: $font-main;
 }
 

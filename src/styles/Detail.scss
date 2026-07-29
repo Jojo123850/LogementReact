@@ -2,15 +2,17 @@
 @import './_mixins.scss';
 @import './global.scss';
 
+// style pour la page de détail 
 .cardDetail {
     max-width: 897px;
     margin: 0 auto;
 
+    @include responsive($breakpointTablette) {
+       padding: 10px;
+    }
+    
     @include responsive($breakpoint) {
         padding: 20px;
-    }
-     @include responsive($breakpointTablette) {
-        padding: 10px;
     }
 
     .divImage {

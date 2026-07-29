@@ -2,6 +2,7 @@
 @import './_mixins.scss';
 @import './global.scss';
 
+// styles pour la grille de cards (Home.tsx) et chaque card (Cards.tsx)
 .cards-grid {
     max-width: 1216px;
     margin: 48px auto;
@@ -9,12 +10,24 @@
     grid-template-columns: 1fr 1fr 1fr;
     gap: 24px;
     padding: 0 24px;
+    
+        @include responsive($breakpointTablette) {
+            grid-template-columns: 1fr 1fr;
+   
+        }
+
+        @include responsive($breakpoint) {
+            grid-template-columns: 1fr;
+        
+        }
 }
 
 .card {
     border-radius: 8px;
     overflow: hidden;
     box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+
+        
 
     img {
         width: 100%;
@@ -53,19 +66,3 @@
 
 
 
-@media (max-width: 1024px){
-    .cards-grid{
-        display:grid;
-        grid-template-columns: 1fr 1fr;
-
-    }
-    
-}
-@media (max-width: 767px){
-    .cards-grid{
-        display:grid;
-        grid-template-columns: 1fr;
-
-    }
-    
-}
