@@ -14,6 +14,7 @@ export default function BurgerM() {
         <button id="burgerMenu" aria-expanded={isOpen} aria-label="Menu" onClick={() => setIsOpen(!isOpen)}>
             <i className={`fa-solid ${isOpen ? "fa-xmark" : "fa-bars"}`}></i>
         </button>
+        
         <div className="collapsediv">
                 <nav aria-expanded={isOpen}>
                     <ul className={isOpen ? "menu-open" : "menu-closed"}>
