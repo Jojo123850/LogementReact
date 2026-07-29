@@ -1,11 +1,11 @@
 import { useState } from "react";
 
-type Caroussel = {
+type Carrousel = {
     pictures:string[];
     alt: string;
 }
 
-export default function GetPictures({ pictures, alt }: Caroussel){
+export default function Carrousel({ pictures, alt }: Carrousel){
     const [pictureIndex, setPicture ] = useState<number>(0);
 
     const prevPic = () => {

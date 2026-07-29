@@ -25,7 +25,6 @@
     npm install
     npm install react-router-dom
     npm install sass
-
 ```
 
 ## Lancer le projet en développement
@@ -36,24 +35,27 @@
 ## Structure du projet
 ```
 LogementReact/
-├── eval-react                     
 ├── public/                     # Fichiers statiques
 ├── src/
 │   ├── components/             # Composants réutilisables
-│   │   ├── Carrousel/          # Galerie photo avec navigation
-│   │   ├── Collapse/           # Section repliable (description)
-│   │   ├── CollapseEquipement/ # Section repliable (équipements)
-│   │   ├── Cards/              # Cartes de logement (page d'accueil)
-│   │   ├── Footer/
-│   │   └── Navbar/
-│   ├── data/                   # fichier json (new-logements.json)
-│   ├── pages/                  # Pages de l'application
-│   │   ├── Home/
-│   │   ├── Detail/
-│   │   └── NotFound/
-│   ├── styles/                 # Fichiers Sass (variables, mixins, styles globaux et par composant)
+│   │   ├── Cards.tsx           # Carte de logement (page d'accueil)
+│   │   ├── Caroussel.tsx       # Galerie photo avec navigation
+│   │   ├── Collapse.tsx        # Section repliable générique (description + équipements)
+│   │   ├── Footer.tsx
+│   │   └── Navbar.tsx
+│   ├── utils/
+│   │   └── Icone.tsx           # icône Font Awesome
+│   ├── data/
+│   │   └── new-logements.json  # Données des logements
+│   ├── pages/                  # Pages 
+│   │   ├── Home.tsx
+│   │   ├── Details.tsx
+│   │   ├── Apropos.tsx
+│   │   ├── Contact.tsx
+│   │   └── NotFound.tsx
+│   ├── styles/                 # Fichiers Sass(variables, mixins, styles globaux et par page)
 │   ├── App.tsx                 # Déclaration des routes
-│   └── main.tsx               
+│   └── main.tsx
 ├── index.html
 ├── package.json
 ├── tsconfig.json

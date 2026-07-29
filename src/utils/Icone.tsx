@@ -1,13 +1,5 @@
-import { useState } from "react";
-import "../styles/Detail.scss";
 
-type CollapseEquipementProps = {
-    title: string;
-    equipments: string[];
-};
-
-
-function IconeEquip(equipement: string) {
+export default function IconeEquip(equipement: string) {
   switch (equipement) {
     case "Wifi":
       return <i className="fa-solid fa-wifi"></i>;
@@ -72,31 +64,4 @@ function IconeEquip(equipement: string) {
     default:
       return <i className="fa-solid fa-circle-question"></i>;
   }
-}
-
-export default function CollapseEq({ title, equipments }: CollapseEquipementProps) {
-    const [isOpen, setIsOpen] = useState(false);
-
-    const toggleOpen = () => {
-        setIsOpen(!isOpen);
-    };
-
-    return (
-        <div className="collapse"  onClick={toggleOpen}>
-            <div className="collapsediv">
-                <p aria-expanded={isOpen}>{title}</p>
-                {isOpen ? <i className="fa-solid fa-arrow-up"></i> : <i className="fa-solid fa-arrow-down"></i>}  
-            </div>
-
-            {isOpen && (
-                <ul className="list-equip">
-                    {equipments.map((equip) => (
-                        <li key={equip}>{IconeEquip(equip)}  
-                            <span> {equip} </span> 
-                        </li>
-                    ))}
-                </ul>
-            )}
-        </div>
-    );
 }

@@ -1,4 +1,4 @@
-import { Link } from "react-router-dom";
+import "../styles/Footer.scss";
 
 export default function Footer(){
     return(
@@ -19,9 +19,7 @@ export default function Footer(){
                     <li><a  href="#">Centre d'aide</a></li>
                     <li><a href="#">Nous contacter</a></li>
                     <li><a href="#">Signaler un problème</a></li>
-                    <li>
-                        <Link to="/NotFound">Page 404</Link>
-                    </li>
+                    <li><a href="#">Page 404</a></li>
                 </ul>
             
             </article>
@@ -38,7 +36,7 @@ export default function Footer(){
         </div>
 
         <div className="copyright">
-            <p>© 2024 Kasa. Tous droits réservés.<a href="https://storycom.fr"></a></p>
+            <p>© 2024 Kasa. Tous droits réservés</p>
         </div>
 
     </footer>

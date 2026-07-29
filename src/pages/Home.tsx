@@ -3,9 +3,7 @@ import Navbar from "../components/Navbar";
 import Footer from "../components/Footer";
 import Card from "../components/Cards";
 import "../styles/Home.scss";
-import "../styles/Navbar.scss";
-import "../styles/Footer.scss";
-import "../styles/Cards.scss";
+
 
 export default function Home(){
     return(
@@ -34,7 +32,7 @@ export default function Home(){
             ))}
         </section>
         </main>
-        
+
         <Footer/>
         </>
     )

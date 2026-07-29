@@ -12,7 +12,7 @@ li{
    
 }
 
-h1,a, h3, li,p, .desc{
+h1,a, h3, li,p, .content{
     font-family: $font-main;
 }
 
@@ -23,7 +23,6 @@ a{
     font-size: 16px;
     color: $fifth-color;
     font-weight: 400;
-    font-size: 16px;
     line-height: 24px;
     vertical-align: middle;
      text-decoration: none;
@@ -32,7 +31,6 @@ a{
 
 p{
     font-weight: 400;
-    font-style: Regular;
     line-height: 28px;
     letter-spacing: 0%;
     color: $tertiary-color;
@@ -43,7 +41,6 @@ p{
 
 h3{
 font-weight: 600;
-font-style: Semi Bold;
 line-height: 28px;
 vertical-align: middle;
 color:$secondary-color ;

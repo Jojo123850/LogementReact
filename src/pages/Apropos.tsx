@@ -5,7 +5,7 @@ export default function Propos(){
     return(
         <>
         <div className="divP">
-            <p className="pagePC">Salut beaugosse</p>
+            <p className="pagePC">Cette page est vide</p>
             <Link to="/"  className="btn">Retour à l'accueil</Link>
         </div>
         </>

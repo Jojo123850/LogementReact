@@ -11,7 +11,8 @@ export type RoomCard = {
 };
 
 export default function Card({ id, title, location, pictures, tags, rating }: RoomCard) {
-    const ratingNumber = parseInt(rating, 10);
+
+    const ratingNumber =Number(rating);
     const stars = [];
 
     for (let i = 1; i <= 5; i++) {
@@ -25,19 +26,17 @@ export default function Card({ id, title, location, pictures, tags, rating }: Ro
     return (
         <div className="card">
            <Link to={`/logement/${id}`}>
-            <img src={pictures[1]} alt={title} />
+            <img src={pictures[0]} alt={title} />
             <div className="card-content">
                 <h3>{title}</h3>
-                <p className="location">
-                     <i className="fa-solid fa-location-dot"></i> 
-                     {location}
+                <p className="location"><i className="fa-solid fa-location-dot"></i>  {location}
                 </p>
 
                 <div className="tags">
                     {tags.map((tag) => (
                     <span key={tag} className="tag">{tag}</span>))}
                 </div>
-                
+
                 <p className="rating">{stars} <span> ({rating})</span> </p>
             </div>
           

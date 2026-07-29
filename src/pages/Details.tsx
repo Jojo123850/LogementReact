@@ -1,24 +1,24 @@
 import data from "../data/new-logements.json";
+import { Link } from "react-router-dom";
 import Navbar from "../components/Navbar";
 import Footer from "../components/Footer";
-import "../styles/Navbar.scss";
-import "../styles/Footer.scss";
 import { useParams } from "react-router-dom";
 import "../styles/Detail.scss";
-import CollapseCard from "../components/Collapse";
-import CollapseEq from "../components/CollapseEquipement";
-import GetPictures from "../components/Caroussel";
+import Collapse from "../components/Collapse";
+import IconeEquip from "../utils/Icone";
+import Carrousel from "../components/Carrousel";
 
 
 export default function Detail(){
     const { id } = useParams();
-    const logement = data.find((item) => item.id == id)
+    const logement = data.find((item) => item.id === id)
 
     if(!logement){
         return(
             <>
                 <Navbar/>
-                <h3>Logement itrouvable</h3>
+                    <h3>Logement introuvable</h3>
+                    <Link to="/" className="btn">Retour à l'accueil</Link>
                 <Footer/>
             </>
         )
@@ -41,7 +41,7 @@ export default function Detail(){
 
         <div className="cardDetail">
                   
-            <GetPictures pictures={pictures} alt={title} />
+            <Carrousel pictures={pictures} alt={title} />
 
             <div className="card-contentDetail">
                 <h1>{title}</h1>
@@ -68,9 +68,16 @@ export default function Detail(){
                 </div>
             </article>
            
-            <CollapseCard title="Description" description={description} />
-            <CollapseEq title="Equipements" equipments={equipments} />
-            
+           <Collapse title="Description">{description}</Collapse>
+
+            <Collapse title="Équipements">
+                <ul className="list-equip">
+                    {equipments.map((eq) => (
+                    <li key={eq}>{IconeEquip(eq)} <span>{eq}</span></li>
+                    ))}
+                </ul>
+            </Collapse>
+
         </div>
 
         <Footer/>

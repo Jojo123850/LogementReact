@@ -5,7 +5,7 @@ export default function Contact(){
     return(
         <>
         <div className="divP">
-            <p className="pagePC">Salut beaugosse</p>  
+            <p className="pagePC">Contacte-moi</p>  
             <Link to="/" className="btn">Retour à l'accueil</Link>
         </div>
         </>

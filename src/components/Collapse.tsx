@@ -1,31 +1,24 @@
 import { useState} from "react";
 import "../styles/Detail.scss";
 
-type CollapseCard = {
-    description: string;
-    title: string
 
-}
-export default function Collapse({ description, title }: CollapseCard) {
+type CollapseProps = {
+  title: string;
+  children: React.ReactNode;
+};
+
+
+export default function Collapse({ title, children }: CollapseProps) {
   const [isOpen, setIsOpen] = useState(false);
 
-  const toggleOpen = () => {
-    setIsOpen(!isOpen);
-  };
-
   return (
-    <div className="collapse"  onClick={toggleOpen} >
-        <div className="collapsediv">
-            <p aria-expanded={isOpen}>{title}</p>
-            {isOpen ? <i className="fa-solid fa-arrow-up"></i> : <i className="fa-solid fa-arrow-down"></i>} 
-        </div>
+    <div className="collapse" onClick={() => setIsOpen(!isOpen)}>
+      <div className="collapsediv">
+        <p aria-expanded={isOpen}>{title}</p>
+        <i className={`fa-solid fa-arrow-${isOpen ? "up" : "down"}`}></i>
+      </div>
 
-
-        {isOpen && (
-            <div className="desc" >
-                {description}
-            </div>
-         )}
+      {isOpen && <div className="content">{children}</div>}
     </div>
   );
 }

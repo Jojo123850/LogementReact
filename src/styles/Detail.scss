@@ -2,29 +2,42 @@
 @import './_mixins.scss';
 @import './global.scss';
 
-.cardDetail{
+.cardDetail {
     max-width: 897px;
     margin: 0 auto;
 
-   .divImage {
-    position: relative;
-    width: 100%;
+    @include responsive($breakpoint) {
+        padding: 20px;
+    }
+     @include responsive($breakpointTablette) {
+        padding: 10px;
+    }
+
+    .divImage {
+        position: relative;
+        width: 100%;
 
         .image {
-        width: 100%;
-        height: 384px;
-        border-radius: 16px;
-        object-fit: cover;
+            width: 100%;
+            height: 384px;
+            border-radius: 16px;
+            object-fit: cover;
+
+            @include responsive($breakpoint) {
+                height: 255px;
+                border-radius: 10px;
+            }
         }
 
         .btn1, .btn2 {
+            @include flex-center;
             position: absolute;
             top: 50%;
             transform: translateY(-50%);
             width: 36px;
             height: 36px;
             border-radius: 50%;
-            background: rgba(252,248,248,.68);
+            background: rgba(252, 248, 248, .68);
             border: none;
             cursor: pointer;
             z-index: 10;
@@ -32,31 +45,40 @@
 
         .btn1 {
             left: 16px;
+
+            @include responsive($breakpoint) {
+                left: 12px;
+            }
         }
 
         .btn2 {
             right: 16px;
+
+            @include responsive($breakpoint) {
+                right: 12px;
+            }
         }
- 
-}
+    }
+
     .card-contentDetail {
         padding: 16px;
-        h1{
+
+        h1 {
             font-size: 30px;
             font-weight: 700;
-            font-style: Bold;
             line-height: 36px;
             vertical-align: middle;
+        }
 
-        }
-        h3{
+        h3 {
             font-size: 16px;
-            
         }
-        p{
-        font-size: 16px;
+
+        p {
+            font-size: 16px;
         }
-        .rating{
+
+        .rating {
             color: $yellow-color;
             padding-bottom: 20px;
             padding-top: 10px;
@@ -67,7 +89,7 @@
             flex-wrap: wrap;
             gap: 8px;
             margin: 8px 0;
-    
+
             .tag {
                 background: linear-gradient(180deg, $btn-color1 0%, $btn-color2 100%);
                 color: $primary-color;
@@ -76,96 +98,67 @@
                 border-radius: 16px;
             }
         }
-
     }
 
-    article{
+    article {
         display: flex;
-       flex-wrap: wrap;
-       gap: 10px;
-       
-       img{
-        margin-left: 10px; 
-        width: 64px;
-        height: 64px;
-        object-fit: cover;
-        border-radius: 50%;
-        flex-shrink: 0;
-        
-       }
-       .divInfo{
-        align-self: center;
-       }
+        flex-wrap: wrap;
+        gap: 10px;
+
+        img {
+            margin-left: 10px;
+            width: 64px;
+            height: 64px;
+            object-fit: cover;
+            border-radius: 50%;
+            flex-shrink: 0;
+        }
+
+        .divInfo {
+            align-self: center;
+        }
     }
 
-
-    .desc, li{
+   li, .content, span {
         color: $tertiary-color;
         font-size: 16px;
         padding-bottom: 4px;
         padding-top: 15px;
     }
-    
-    .collapse{
+
+    .collapse {
         border-radius: 16px;
         padding: 12px;
         background-color: $primary-color;
-        border:1px solid $a-color;
+        border: 1px solid $a_color;
         margin-bottom: 35px;
         margin-top: 35px;
-    
-        .collapsediv{
-            display:flex;
+
+        .collapsediv {
+            display: flex;
             justify-content: space-between;
-            
-            i{
+
+            i {
                 color: $secondary-color;
             }
-            
-            
-            p{
+
+            p {
                 color: $secondary-color;
                 font-weight: 600;
-                font-style: Semi Bold;
                 line-height: 24px;
                 vertical-align: middle;
-                
             }
         }
-        .list-equip{
+
+        .list-equip {
             display: grid;
             grid-template-columns: 1fr 1fr;
             list-style: none;
 
-            i{
-                color:$i_color ;
+            i {
+                color: $i_color;
                 padding-right: 5px;
             }
-
         }
     }
-}
-
-@media (max-width: 767px) {
-  .cardDetail {
-    padding: 20px;
-  }
-
-  .divImage {
-    width: 100%;
-
-    .image {
-      width: 100%;
-      height: 255px;
-      border-radius: 10px;
-    }
-
-    .btn1 {
-      left: 12px;
-    }
-
-    .btn2 {
-      right: 12px;
-    }
-  }
 }
