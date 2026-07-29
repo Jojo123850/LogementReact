@@ -18,7 +18,7 @@ export default function BurgerM() {
                 <nav aria-expanded={isOpen}>
                     <ul className={isOpen ? "menu-open" : "menu-closed"}>
                         <li><Link to="/">Accueil</Link></li>
-                        <li><Link to="/APropos">A propos</Link></li>
+                        <li><Link to="/Apropos">A propos</Link></li>
                         <li><Link to="/Contact">Contact</Link></li>
                     </ul>
                 </nav>
