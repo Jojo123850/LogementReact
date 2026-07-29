@@ -1,13 +1,17 @@
 import { useState } from "react";
 
+// typage Carrousel
 type Carrousel = {
     pictures:string[];
     alt: string;
 }
 
+// fonction pour le carrousel
 export default function Carrousel({ pictures, alt }: Carrousel){
+  // index de l'image affichée (0 par défaut) et fonction pour le changer
     const [pictureIndex, setPicture ] = useState<number>(0);
 
+    // pour le btn prev
     const prevPic = () => {
         setPicture((prevImage) => {
             if(prevImage === 0) {
@@ -18,7 +22,7 @@ export default function Carrousel({ pictures, alt }: Carrousel){
         })
     }
 
-   
+//    pour le btn next
     const nextPic = () => {
         setPicture((nextImage) => {
             if(nextImage === pictures.length -1) {
@@ -29,6 +33,7 @@ export default function Carrousel({ pictures, alt }: Carrousel){
         })
     }
 
+    // si aucune image, on affiche p à la place d'un Carrousel vide 
     if(!pictures || pictures.length === 0){
        return <p>Il y a pas d'image</p>
     }

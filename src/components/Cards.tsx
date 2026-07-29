@@ -10,11 +10,13 @@ export type RoomCard = {
     rating: string;
 };
 
+// composant qui affiche une card (utilisé en boucle dans Home.tsx)
 export default function Card({ id, title, location, pictures, tags, rating }: RoomCard) {
 
     const ratingNumber =Number(rating);
     const stars = [];
 
+// pour les rating
     for (let i = 1; i <= 5; i++) {
         if (i <= ratingNumber) {
             stars.push(<i key={i} className="fa-solid fa-star"></i>);
@@ -32,6 +34,7 @@ export default function Card({ id, title, location, pictures, tags, rating }: Ro
                 <p className="location"><i className="fa-solid fa-location-dot"></i>  {location}
                 </p>
 
+                {/* parcourir tags du data et afficher chaque tag*/}
                 <div className="tags">
                     {tags.map((tag) => (
                     <span key={tag} className="tag">{tag}</span>))}

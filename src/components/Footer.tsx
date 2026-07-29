@@ -1,5 +1,6 @@
 import "../styles/Footer.scss";
 
+// function pour le footer
 export default function Footer(){
     return(
 <footer>

@@ -1,6 +1,7 @@
 import { Link } from "react-router-dom";
 import "../styles/contactPropos.scss";
 
+// j'ai ajouté un peu de contenu dans A propos
 export default function Propos(){
     return(
         <>

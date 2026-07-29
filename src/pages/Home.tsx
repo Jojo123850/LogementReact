@@ -4,7 +4,7 @@ import Footer from "../components/Footer";
 import Card from "../components/Cards";
 import "../styles/Home.scss";
 
-
+// la page d'accueil
 export default function Home(){
     return(
         <>
@@ -18,7 +18,9 @@ export default function Home(){
                     partout dans le monde</p>
             </div>
         </section>
+
         <section className="cards-grid">
+        {/* parcourir chaque logement dans data  et afficher une card  */}
             {data.map((item) => (
                 <Card
                     key={item.id}

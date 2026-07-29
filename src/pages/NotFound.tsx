@@ -1,6 +1,8 @@
 import { Link } from "react-router-dom";
 import "../styles/contactPropos.scss";
 
+// page affichée quand l'url ne respecte à aucune route,  
+// la page pour les pages inexistantes
 export default function NotFound() {
   return (
     <div className="divP">

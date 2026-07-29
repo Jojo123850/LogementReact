@@ -1,7 +1,7 @@
 import { Link } from "react-router-dom";
 import "../styles/Navbar.scss";
 
-
+// pour le header
 export default function Navbar(){
     return(
         <header>

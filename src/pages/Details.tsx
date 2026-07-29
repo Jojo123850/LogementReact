@@ -9,10 +9,12 @@ import IconeEquip from "../utils/Icone";
 import Carrousel from "../components/Carrousel";
 
 
+// fonction pour afficher les détails
 export default function Detail(){
     const { id } = useParams();
     const logement = data.find((item) => item.id === id)
 
+    // au cas ou on trouve  pas de logement
     if(!logement){
         return(
             <>
@@ -28,6 +30,7 @@ export default function Detail(){
     const stars = [];
     const ratingNumber =Number(rating);
 
+    // pour afficher le rating
     for (let i = 1; i <= 5; i++) {
         if (i <= ratingNumber) {
             stars.push(<i key={i} className="fa-solid fa-star"></i>);
@@ -40,7 +43,7 @@ export default function Detail(){
         <Navbar/>
 
         <div className="cardDetail">
-                  
+         {/*carroussel du composant carrousel.tsx  */}
             <Carrousel pictures={pictures} alt={title} />
 
             <div className="card-contentDetail">
@@ -50,6 +53,7 @@ export default function Detail(){
                     <i className="fa-solid fa-location-dot"></i> {location}
                 </p>
 
+                {/*  parcourir les tags du logement et afficher chaque tag */}
                 <div className="tags">
                     {tags.map((tag) => (<span key={tag} className="tag">{tag}</span>))}
                 </div>
@@ -67,10 +71,13 @@ export default function Detail(){
                     <p>Hote depuis 3ans</p>
                 </div>
             </article>
-           
+
+           {/* collapse du composant collapse */}
            <Collapse title="Description">{description}</Collapse>
 
             <Collapse title="Équipements">
+
+           {/* parcourir le tableau equipements et afficher l'icône + le nom de chaque équipement*/}
                 <ul className="list-equip">
                     {equipments.map((eq) => (
                     <li key={eq}>{IconeEquip(eq)} <span>{eq}</span></li>

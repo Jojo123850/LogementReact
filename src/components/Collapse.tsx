@@ -7,8 +7,10 @@ type CollapseProps = {
   children: React.ReactNode;
 };
 
-
+// fonction pour le collapse
 export default function Collapse({ title, children }: CollapseProps) {
+
+// variable par défaut false et fonction pour changer l'état du collapse
   const [isOpen, setIsOpen] = useState(false);
 
   return (
